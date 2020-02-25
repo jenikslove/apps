@@ -1,0 +1,55 @@
+#battery {
+    width: 300px;
+    height: 90px;
+    border: 1px solid #c0c0c0;
+    border-radius: 6px;
+    padding: 10px;
+    position: relative;
+}
+#battery::after{
+    content: "";
+    width: 20px;
+    height: 40px;
+    display: block;
+    border: 1px solid #c0c0c0;
+    border-left-color: #fff;
+    position: absolute;
+    right: -22px;
+    top: 31px;
+    /* background: #c0c0c0; */
+    border-radius: 0 4px 4px;
+}
+
+#battary-level {
+    width: 30%;
+    height: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(143,143,182,1) 0%, rgba(31,201,236,1) 32%);
+    transition: all ease 1s;
+}
+
+#battery-digit {
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    font-size: 70px;
+    line-height: 72px;
+}
+
+#battary-level.battary-animation {
+    animation-name: battary-charding;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes battary-charding {
+0% {
+    width: 20%;
+}
+100% {
+    width: 100%;
+}
+}
